@@ -6,6 +6,7 @@ import org.hibernate.annotations.DynamicUpdate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Date;
 
 /**
  * @ClassName ProductCategory
@@ -21,16 +22,20 @@ public class ProductCategory {
 
     @Id
     @GeneratedValue
-    private int categoryId;
+    private Integer categoryId;
 
     private String categoryName;
 
-    private int categoryType;
+    private Integer categoryType;
+
+    private Date createTime;
+
+    private Date updateTime;
 
     public ProductCategory() {
     }
 
-    public ProductCategory(String categoryName, int categoryType) {
+    public ProductCategory(String categoryName, Integer categoryType) {
         this.categoryName = categoryName;
         this.categoryType = categoryType;
     }

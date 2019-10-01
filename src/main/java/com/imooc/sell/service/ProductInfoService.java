@@ -1,6 +1,6 @@
 package com.imooc.sell.service;
 
-import com.imooc.sell.Enums.ProductInfoStatusEnum;
+import com.imooc.sell.dto.CartDto;
 import com.imooc.sell.entity.ProductInfo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -22,6 +22,7 @@ public interface ProductInfoService {
     ProductInfo save(ProductInfo productInfo);
 
     //加库存
-
+    void increaseStock(List<CartDto> cartDto);
     //减库存
+    void decreaseStock(List<CartDto> cartDto);
 }

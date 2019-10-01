@@ -1,0 +1,2 @@
+Closing org.springframework.web.context.support.GenericWebApplicationContext@a8e6492: startup date [Sun Sep 29 14:26:07 GMT+08:00 2019]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'

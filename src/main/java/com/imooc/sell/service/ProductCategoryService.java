@@ -16,7 +16,7 @@ public interface ProductCategoryService {
     List<ProductCategory> findAll();
 
     //根据categoryType查找所有商品
-    List<ProductCategory>findCatgeoryByCategoryTypeIn(List<Integer>categoryType);
+    List<ProductCategory>findCategoryByCategoryTypeIn(List<Integer>categoryType);
 
     //保存
     ProductCategory save(ProductCategory productCategory);

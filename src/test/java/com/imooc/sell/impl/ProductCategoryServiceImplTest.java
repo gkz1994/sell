@@ -33,8 +33,8 @@ public class ProductCategoryServiceImplTest {
     }
 
     @Test
-    public void findCatgeoryByCategoryTypeIn() {
-        List<ProductCategory> category = categoryService.findCatgeoryByCategoryTypeIn(Arrays.asList(1, 2, 3, 4));
+    public void findCategoryByCategoryTypeIn() {
+        List<ProductCategory> category = categoryService.findCategoryByCategoryTypeIn(Arrays.asList(1, 2, 3, 4));
         Assert.assertNotEquals(0,category.size());
 
     }
