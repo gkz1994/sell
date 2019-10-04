@@ -1,6 +1,7 @@
 package com.imooc.sell.service;
 
 import com.imooc.sell.dto.OrderMasterDto;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
@@ -17,7 +18,7 @@ public interface OrderMasterService {
     OrderMasterDto findOne(String OrderMasterId);
 
     /**查找订单列表*/
-    List<OrderMasterDto>findList(String buyerOpenId, Pageable pageable);
+    Page<OrderMasterDto> findList(String buyerOpenId, Pageable pageable);
 
     /**取消订单*/
     OrderMasterDto cancel(OrderMasterDto orderMasterDto);

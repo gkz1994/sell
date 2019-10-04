@@ -1,8 +1,11 @@
 package com.imooc.sell.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.imooc.sell.entity.OrderDetail;
 import com.imooc.sell.enums.OrderMasterOrderStatusEnum;
 import com.imooc.sell.enums.OrderMasterPayStatusEnum;
+import com.imooc.sell.utils.serializer.Date2LongSerializer;
 import lombok.Data;
 
 import javax.persistence.Id;
@@ -18,6 +21,7 @@ import java.util.List;
  * @Version 1.0
  **/
 @Data
+//@JsonInclude(JsonInclude.Include.NON_NULL)
 public class OrderMasterDto {
     /**订单id*/
     private String orderId;
@@ -44,9 +48,11 @@ public class OrderMasterDto {
     private Integer payStatus = OrderMasterPayStatusEnum.WAIT.getCode();
 
     /**创建时间*/
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date createTime;
 
     /**更新时间*/
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date updateTime;
 
     List<OrderDetail>orderDetailList;
